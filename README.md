@@ -22,3 +22,4 @@
 -------
 參考資料
 -------
+* kaggle-TensorFlow Speech Recognition Challenge : https://www.kaggle.com/c/tensorflow-speech-recognition-challenge/data 
