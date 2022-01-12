@@ -18,8 +18,15 @@
 * 麥克風  *1以上
 * 喇叭 *1
 
-軟體安裝
------
+安裝
+--------
+Raspberry bluetooth connect:
+    1.查看藍芽開啟狀態 `systemctl status bluetooth`
+    2.`sudo bluetoothctl`
+        a.`list`
+        b.`scan on` 掃描
+        c.`pair` your bluetooth device
+    
 * Python3
   * pygame
   * pyaudio
@@ -32,3 +39,5 @@
 參考資料
 -------
 * kaggle-TensorFlow Speech Recognition Challenge : https://www.kaggle.com/c/tensorflow-speech-recognition-challenge/data 
+* 樹莓派（Raspberry Pi 4）開啟和連接藍牙:https://blog.csdn.net/Cool2050/article/details/105615831
+* 
