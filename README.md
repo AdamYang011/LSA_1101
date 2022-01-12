@@ -20,30 +20,30 @@
 
 安裝
 --------
-* Raspberry bluetooth connect
+* ### Raspberry bluetooth connect
     * 1.查看藍芽開啟狀態 `systemctl status bluetooth`
     * 2.`sudo bluetoothctl`
         * a.`list`
         * b.`scan on` 掃描
         * c.`pair` your bluetooth device
         
-* PyAudio
-    * 1. `sudo apt-get install portaudio.dev`
-    * 2. `sudo apt-get install python3-pyaudio`
-* 錄音
+* ### PyAudio
+    * 1.`sudo apt-get install portaudio.dev`
+    * 2.`sudo apt-get install python3-pyaudio`
+* ### 錄音
 
-* 下載
-    * Tensorflow lite
+* ### 下載
+    * #### Tensorflow lite
         * 可以用來跑語音辨識的model
         * `pip3 install --extra-index-url https://google-coral.github.io/py-repo/ tflite_runtime`
-     * Librosa & llvmlite
+     * #### Librosa & llvmlite
          * 匯入聲音檔用的
          * 1.llvmlite
             * `pip install llvmlite` & `pip3 install librosa  
          * 2.librosa 
             *  `sudo apt install libblas-dev llvm python3-pip python3-scipy`
-* Python3
-  * pygame
+* ### Python3
+  * #### pygame
   
  
 課堂中的應用
