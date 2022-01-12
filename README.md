@@ -20,16 +20,31 @@
 
 安裝
 --------
-Raspberry bluetooth connect:
-    1.查看藍芽開啟狀態 `systemctl status bluetooth`
-    2.`sudo bluetoothctl`
-        a.`list`
-        b.`scan on` 掃描
-        c.`pair` your bluetooth device
-    
+* Raspberry bluetooth connect
+    * 1.查看藍芽開啟狀態 `systemctl status bluetooth`
+    * 2.`sudo bluetoothctl`
+        * a.`list`
+        * b.`scan on` 掃描
+        * c.`pair` your bluetooth device
+        
+* PyAudio
+    * 1. `sudo apt-get install portaudio.dev`
+    * 2. `sudo apt-get install python3-pyaudio`
+* 錄音
+
+* 下載
+    * Tensorflow lite
+        * 可以用來跑語音辨識的model
+        * `pip3 install --extra-index-url https://google-coral.github.io/py-repo/ tflite_runtime`
+     * Librosa & llvmlite
+         * 匯入聲音檔用的
+         * 1.llvmlite
+            * `pip install llvmlite` & `pip3 install librosa  
+         * 2.librosa 
+            *  `sudo apt install libblas-dev llvm python3-pip python3-scipy`
 * Python3
   * pygame
-  * pyaudio
+  
  
 課堂中的應用
 ------
@@ -39,5 +54,8 @@ Raspberry bluetooth connect:
 參考資料
 -------
 * kaggle-TensorFlow Speech Recognition Challenge : https://www.kaggle.com/c/tensorflow-speech-recognition-challenge/data 
-* 樹莓派（Raspberry Pi 4）開啟和連接藍牙:https://blog.csdn.net/Cool2050/article/details/105615831
-* 
+* 樹莓派（Raspberry Pi 4）開啟和連接藍牙https://blog.csdn.net/Cool2050/article/details/105615831
+*  樹莓派下安裝pyaudio與使用 https://www.twblogs.net/a/5b7cdbfd2b71770a43dce7c6
+*  how to hear mic sound over speakers- Ubuntu karmic https://superuser.com/questions/87571/how-to-hear-mic-sound-over-speakers-ubuntu-karmic
+*  tensorflow 文本 https://www.tensorflow.org/lite/guide/python
+*  
