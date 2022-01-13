@@ -20,6 +20,8 @@
 
 安裝
 --------
+* ### 語音辨識Model
+
 * ### Raspberry bluetooth connect
     * 1.查看藍芽開啟狀態 `systemctl status bluetooth`
     * 2.`sudo bluetoothctl`
@@ -37,13 +39,12 @@
         * `pip3 install --extra-index-url https://google-coral.github.io/py-repo/ tflite_runtime`
      * #### Librosa & llvmlite
          * 匯入聲音檔用的
-         * 1.llvmlite
-            * `pip install llvmlite` & `pip3 install librosa  
+         * 1.llvmlite 
          * 2.librosa 
-            *  `sudo apt install libblas-dev llvm python3-pip python3-scipy`
 * ### Python3
-  * #### pygame
-  
+* ### 遊戲介面 : pygame
+* ### 遊戲 : 俄羅斯方塊 (Source: https://www.gushiciku.cn/pl/pBtR/zh-tw)
+
  
 課堂中的應用
 ------
