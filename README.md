@@ -44,6 +44,7 @@
 * ### Python3
 * ### 遊戲介面 : pygame
 * ### 遊戲 : 俄羅斯方塊 (Source: https://www.gushiciku.cn/pl/pBtR/zh-tw)
+* Notion: https://www.notion.so/Model-4b2a20e9577e4678ba091a12a37792d8
 
  
 課堂中的應用
