@@ -3,8 +3,7 @@
 
 概念發想
 -----
-現如今早已是語音辨識的天下了，Apple有Siri、各廠家電也都紛紛加入AI語音辨識的功能、會議記錄的製作等等等，只需要用「說的」，就能讓機器替我們完成許多事，多方便啊!<br>
-因此我們想嘗試能不能用「說的」來玩遊戲，讓遊戲更加有趣，也發揮出語音辨識的優點。
+雷霆戰機是我們的童年回憶，透過方向鍵翱翔中銀河之中，刺激好玩的遊戲過程，更是讓我們度過愉快的遊戲時光。近年來，機器學習是當紅科技，我們打算挑戰自我，嘗試將新科技結合在遊戲上，提供更為豐富的遊戲體驗。因此我們結合機器學習，訓練語音辨識模型，並透過口頭指令，操控戰機，提升遊戲刺激度與難度。
 
 功能
 -----
@@ -15,48 +14,46 @@
 使用設備
 ---------
 * 樹梅派(pi4) *1
-* 麥克風  *1以上
-* 喇叭 *1
+* 藍芽耳機  *1以上
 
 安裝
 --------
 * ### 語音辨識Model
-
-* ### Raspberry bluetooth connect
-    * 1.查看藍芽開啟狀態 `systemctl status bluetooth`
-    * 2.`sudo bluetoothctl`
-        * a.`list`
-        * b.`scan on` 掃描
-        * c.`pair` your bluetooth device
-* ### PyAudio
-    * 1.`sudo apt-get install portaudio.dev`
-    * 2.`sudo apt-get install python3-pyaudio`
-* ### 錄音
-
-* ### 下載
-    * #### Tensorflow lite
-        * 可以用來跑語音辨識的model
-        * `pip3 install --extra-index-url https://google-coral.github.io/py-repo/ tflite_runtime`
-     * #### Librosa & llvmlite
-         * 匯入聲音檔用的
-         * 1.llvmlite 
-         * 2.librosa 
-* ### Python3
-* ### 遊戲介面 : pygame
-* ### 遊戲 : 俄羅斯方塊 (Source: https://www.gushiciku.cn/pl/pBtR/zh-tw)
-* Notion: https://www.notion.so/Model-4b2a20e9577e4678ba091a12a37792d8
-
+  *  llvmlite 
+  *  librosa 
+  *  Tensorflow lite
+* ### 遊戲 : 雷霆戰機 
+  * 遊戲介面 : pygame
  
+* ### 實作過程筆記:
+   * Notion: https://www.notion.so/Model-4b2a20e9577e4678ba091a12a37792d8
+   
 課堂中的應用
 ------
+* SSH遠端連線
+* Linux系統使用與實作
 
 工作分配
 -------
+楊博丞:雷霆戰機遊戲製作、上台報告、Debug
+張晉瑋:語音辨識模型訓練、整合語音辨識結果到遊戲中、Debug
+黃姵馨:雷霆戰機遊戲介面製作、簡報製作、Debug
+許雱茹:會議紀錄、Github資料整理、管理設備、Debug
+
 參考資料
 -------
-* kaggle-TensorFlow Speech Recognition Challenge : https://www.kaggle.com/c/tensorflow-speech-recognition-challenge/data 
-* 樹莓派（Raspberry Pi 4）開啟和連接藍牙https://blog.csdn.net/Cool2050/article/details/105615831
-*  樹莓派下安裝pyaudio與使用 https://www.twblogs.net/a/5b7cdbfd2b71770a43dce7c6
-*  how to hear mic sound over speakers- Ubuntu karmic https://superuser.com/questions/87571/how-to-hear-mic-sound-over-speakers-ubuntu-karmic
-*  tensorflow 文本 https://www.tensorflow.org/lite/guide/python
-*  
+* ### 語音辨識 Model 參考資料 : 
+   *  tensorflow 文本 https://www.tensorflow.org/lite/guide/python
+   *  https://stackoverflow.com/questions/22479787/dpkg-need-an-action-option/36135513
+   *  https://stackoverflow.com/questions/66092421/how-to-rebuild-tensorflow-with-the-compiler-flags
+   *  https://www.notion.so/Model-4b2a20e9577e4678ba091a12a37792d8#aecfb2614da147afbe872844bc9452e1
+   *  https://www.notion.so/Model-4b2a20e9577e4678ba091a12a37792d8#753c6534631b4df5979be89a6ce9c5a1
+   *  kaggle-TensorFlow Speech Recognition Challenge : https://www.kaggle.com/c/tensorflow-speech-recognition-challenge/data 
+* ### Raspberry pi4 操作參考資料:
+   * 樹莓派（Raspberry Pi 4）開啟和連接藍牙https://blog.csdn.net/Cool2050/article/details/105615831
+   *  樹莓派下安裝pyaudio與使用 https://www.twblogs.net/a/5b7cdbfd2b71770a43dce7c6
+   *  how to hear mic sound over speakers- Ubuntu karmic https://superuser.com/questions/87571/how-to-hear-mic-sound-over-speakers-ubuntu-karmic
+   *  https://www.footmark.info/embedded-systems/raspberry-pi/raspberry-pi-scrot-raspbian-desktop/
+   *  在樹莓派4上安裝librosa，llvmlite的方向盤出現錯誤https://www.pythonheidong.com/blog/article/755228/4cd00cdd5bf7a46aba64/
+   *  更新scipy:https://stackoverflow.com/questions/55252264/importerror-libf77blas-so-3-cannot-open-shared-object-file-no-such-file-or-di
+   *  
