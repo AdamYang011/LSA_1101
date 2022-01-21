@@ -21,25 +21,24 @@
 --------
 
 參照mc6666大大的程式在colab上運行，成功得到語音辨識的model(訓練資料可以自己錄，或到kaggle尋找，但是要注意訓練資料與未來要辨識的語音指令需要是相同格式，不然極有可能失效)
-https://github.com/mc6666/DL_Book/blob/main/src/14_09_%E7%9F%AD%E6%8C%87%E4%BB%A4%E8%BE%A8%E8%AD%98.ipynb
+參考: https://github.com/mc6666/DL_Book/blob/main/src/14_09_%E7%9F%AD%E6%8C%87%E4%BB%A4%E8%BE%A8%E8%AD%98.ipynb
+可參考的錄音程式
+https://github.com/mc6666/DL_Book/blob/main/src/14_10_record.py
 
 為了要將model在樹梅派上運行所以必須安裝tensorflow lite，並且將model轉為tensorflow lite的格式
-在樹梅派上輸入以下指令以安裝tensorflow lite
-pip3 install --extra-index-url https://google-coral.github.io/py-repo/ tflite_runtime
-https://www.tensorflow.org/lite/guide/python
+參考下方連結在colab上將Keras model轉為 tflite檔
+參考: https://colab.research.google.com/github/tensorflow/examples/blob/master/lite/codelabs/digit_classifier/ml/step2_train_ml_model.ipynb?hl=zh-tw#scrollTo=AWROBI4iv9fY
 
-將Keras model轉為 tflite檔，參考以下連結
-https://colab.research.google.com/github/tensorflow/examples/blob/master/lite/codelabs/digit_classifier/ml/step2_train_ml_model.ipynb?hl=zh-tw#scrollTo=AWROBI4iv9fY
-
-順利的話語音辨識部分就完成了
+模型訓練就完成了
 
 
 樹梅派模組安裝
 --------
-* ### 語音辨識Model
-  *  llvmlite 
-  *  librosa 
-  *  Tensorflow lite
+* ### 錄音
+  *  pyAudio
+  *  librosa
+  *  
+
 * ### 遊戲 : 雷霆戰機 
   * 遊戲介面 : pygame
  
