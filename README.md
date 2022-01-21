@@ -29,24 +29,42 @@ https://github.com/mc6666/DL_Book/blob/main/src/14_10_record.py
 
 為了要將model在樹梅派上運行所以必須安裝tensorflow lite，並且將model轉為tensorflow lite的格式
 
-參考下方連結在colab上將Keras model轉為 tflite檔
-參考: https://colab.research.google.com/github/tensorflow/examples/blob/master/lite/codelabs/digit_classifier/ml/step2_train_ml_model.ipynb?hl=zh-tw#scrollTo=AWROBI4iv9fY
+參考下方連結上將Keras model轉為 tflite檔
+https://colab.research.google.com/github/tensorflow/examples/blob/master/lite/codelabs/digit_classifier/ml/step2_train_ml_model.ipynb?hl=zh-tw#scrollTo=AWROBI4iv9fY
+https://www.tensorflow.org/lite/guide/get_started?hl=zh-cn
 
 模型訓練就完成了
 
 
-樹梅派模組安裝
+模組安裝
 --------
-* ### 錄音
-  *  pyAudio
-  *  librosa
-  *  
-
-* ### 遊戲 : 雷霆戰機 
-  * 遊戲介面 : pygame
- 
+* ### 錄音 : PyAudio
+  * 在terminal輸入指令
+  * sudo apt-get install portaudio.dev
+  * sudo apt-get install python3-pyaudio
+  * pip3 install wave
+* ### 錄音 : 藍芽耳麥
+  * 連上藍芽耳麥後 
+  * 在terminal輸入指令
+  * pactl load-module module-loopback latency_msec=1
+* ### 使用.wav檔 : librosa
+  * 在terminal輸入指令
+  * LLVM_CONFIG=/usr/bin/llvm-config pip3 install llvmlite=0.31.0 numba==0.48.0 colorama==0.3.9 librosa==0.6.3
+  * (numba跟numpy的版本需要留意，如果numpy發生錯誤建議先uninstall再安裝支援的版本)
+* ### 運算模組 : tensorflow lite 
+  * 在terminal輸入指令
+  * pip3 install --extra-index-url https://google-coral.github.io/py-repo/ tflite_runtime 
+* ### 遊戲 : pygame 
+  * 在terminal輸入指令
+  * pip3 install pygame
 * ### 實作過程筆記:
    * Notion: https://www.notion.so/Model-4b2a20e9577e4678ba091a12a37792d8
+
+串接
+--------
+確認藍芽耳麥可以錄音後，透過tensorflow lite運行語音辨識的tflite檔案
+將辨識結果當作命令傳到遊戲中，就完成了!!!
+
    
 課堂中的應用
 ------
