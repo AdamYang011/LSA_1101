@@ -39,23 +39,24 @@ https://www.tensorflow.org/lite/guide/get_started?hl=zh-cn
 
 模組安裝
 --------
+* ### 連藍芽耳麥：
+  * `sudo bluetoothctl`：進入控制藍芽的介面
+  * `list`：看有沒有連接到設備
+  * 如果沒有：`scan on`，掃描藍芽設備
+  * `pair <裝置的卡號>`：與這個卡號的裝置配對
+  * `exit`：離開藍芽設定
 * ### 錄音 : PyAudio
   * 在terminal輸入指令
   * ```sudo apt-get install portaudio.dev```
   * ```sudo apt-get install python3-pyaudio```
   * `pip3 install wave`
 * ### 錄音 : 藍芽耳麥
-  * 連藍芽耳麥：
-  * `sudo bluetoothctl`：進入控制藍芽的介面
-  * `list`：看有沒有連接到設備
-  * 如果沒有：`scan on`，掃描藍芽設備
-  * `pair <裝置的卡號>`：與這個卡號的裝置配對
-  * `exit`：離開藍芽設定
   * 在terminal輸入指令：
-  * `pactl load-module module-loopback latency_msec=1`
-* ### 使用.wav檔 : librosa
+  * `pactl load-module module-loopback latency_msec=1`：https://superuser.com/questions/87571/how-to-hear-mic-sound-over-speakers-ubuntu-karmic
+* ### 使用.wav檔 : librosa & llvmlite
+  * 這個指令只有librosa可以下載成功 ` sudo apt install libblas-dev llvm python3-pip python3-scipy`：https://www.coder.work/article/2038657
   * 在terminal輸入指令
-  * `LLVM_CONFIG=/usr/bin/llvm-config pip3 install llvmlite=0.31.0 numba==0.48.0 colorama==0.3.9 librosa==0.6.3`
+  * `LLVM_CONFIG=/usr/bin/llvm-config pip3 install llvmlite=0.31.0 numba==0.48.0 colorama==0.3.9 librosa==0.6.3`：https://www.pythonheidong.com/blog/article/755228/4cd00cdd5bf7a46aba64/
   * (numba跟numpy的版本需要留意，如果numpy發生錯誤建議先uninstall再安裝支援的版本)
 * ### 運算模組 : tensorflow lite 
   * 在terminal輸入指令
@@ -110,7 +111,7 @@ https://drive.google.com/drive/folders/1oDUvnXt03M3HZkmc2x8Qh25uaVNLO_Ho?usp=sha
    *  https://www.notion.so/Model-4b2a20e9577e4678ba091a12a37792d8#753c6534631b4df5979be89a6ce9c5a1
    *  kaggle-TensorFlow Speech Recognition Challenge : https://www.kaggle.com/c/tensorflow-speech-recognition-challenge/data 
 * ### Raspberry pi4 操作參考資料:
-   * 樹莓派（Raspberry Pi 4）開啟和連接藍牙https://blog.csdn.net/Cool2050/article/details/105615831
+   *  樹莓派（Raspberry Pi 4）開啟和連接藍牙https://blog.csdn.net/Cool2050/article/details/105615831
    *  樹莓派下安裝pyaudio與使用 https://www.twblogs.net/a/5b7cdbfd2b71770a43dce7c6
    *  how to hear mic sound over speakers- Ubuntu karmic https://superuser.com/questions/87571/how-to-hear-mic-sound-over-speakers-ubuntu-karmic
    *  https://www.footmark.info/embedded-systems/raspberry-pi/raspberry-pi-scrot-raspbian-desktop/
