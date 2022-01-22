@@ -94,6 +94,17 @@ https://drive.google.com/drive/folders/1oDUvnXt03M3HZkmc2x8Qh25uaVNLO_Ho?usp=sha
 * SSH遠端連線
 * Linux系統使用與實作
 
+ERRPR Solve
+------
+* ImportError: libf77blas.so.3: cannot open shared object file: No such file or directory Raspberry Pi3：
+  ```sudo apt-get install python-scipy
+     sudo apt update
+     sudo apt install libatlas-base-dev
+  ```
+  https://stackoverflow.com/questions/55252264/importerror-libf77blas-so-3-cannot-open-shared-object-file-no-such-file-or-di
+* 64 bits 轉 32 bits
+  https://blog.csdn.net/qq_29444571/article/details/83036899
+
 工作分配
 -------
 楊博丞：雷霆戰機遊戲製作、串接語音辨識與遊戲、上台報告、Debug<br/>
