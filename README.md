@@ -41,23 +41,30 @@ https://www.tensorflow.org/lite/guide/get_started?hl=zh-cn
 --------
 * ### 錄音 : PyAudio
   * 在terminal輸入指令
-  * sudo apt-get install portaudio.dev
-  * sudo apt-get install python3-pyaudio
-  * pip3 install wave
+  * ```sudo apt-get install portaudio.dev```
+  * ```sudo apt-get install python3-pyaudio```
+  * `pip3 install wave`
 * ### 錄音 : 藍芽耳麥
-  * 連上藍芽耳麥後 
-  * 在terminal輸入指令
-  * pactl load-module module-loopback latency_msec=1
+  * 連藍芽耳麥：
+  * `sudo bluetoothctl`：進入控制藍芽的介面
+  * `list`：看有沒有連接到設備
+  * 如果沒有：`scan on`，掃描藍芽設備
+  * `pair <裝置的卡號>`：與這個卡號的裝置配對
+  * `exit`：離開藍芽設定
+  * 在terminal輸入指令：
+  * `pactl load-module module-loopback latency_msec=1`
 * ### 使用.wav檔 : librosa
   * 在terminal輸入指令
-  * LLVM_CONFIG=/usr/bin/llvm-config pip3 install llvmlite=0.31.0 numba==0.48.0 colorama==0.3.9 librosa==0.6.3
+  * `LLVM_CONFIG=/usr/bin/llvm-config pip3 install llvmlite=0.31.0 numba==0.48.0 colorama==0.3.9 librosa==0.6.3`
   * (numba跟numpy的版本需要留意，如果numpy發生錯誤建議先uninstall再安裝支援的版本)
 * ### 運算模組 : tensorflow lite 
   * 在terminal輸入指令
-  * pip3 install --extra-index-url https://google-coral.github.io/py-repo/ tflite_runtime 
-* ### 遊戲 : pygame 
-  * 在terminal輸入指令
-  * pip3 install pygame
+  * `pip3 install --extra-index-url https://google-coral.github.io/py-repo/ tflite_runtime`
+* ### 遊戲 & 遊戲介面 (使用python)
+  *  在terminal輸入指令
+  *  `sudo apt install python3-pip`
+  *  `pip3 install pygame`：download pygame
+  *  `pip3 install tk`：download tkinter
 * ### 實作過程筆記:
    * Notion: https://www.notion.so/Model-4b2a20e9577e4678ba091a12a37792d8
 
@@ -75,11 +82,11 @@ https://www.tensorflow.org/lite/guide/get_started?hl=zh-cn
 透過自動射擊與左右移動閃避隕石的攻擊，擊碎隕石後，有一定機率產生道具，紅心為恢復血量，閃電為增加子彈數目(子彈上限為兩顆，時限為5秒，超過時間後即回復為一顆子彈)，當被隕石砸中，會依據隕石大小扣除等比例血量，一旦血條清空，遊戲即結束。
 * ### 貪食蛇 :
 遊戲規則：在地圖範圍中，有一隻不貪食的蛇，與許多莓果。在遊戲中，貪食蛇有五格的長度，牠不能吃到遊戲畫面中有毒的莓果，否則會減少一條命(減少一個長度)，當吃到五個莓果後，不貪食蛇就會因食物中毒而死亡，遊戲結束。
-遊玩方法：遊戲開始後，貪食蛇會自動向前，玩家可以透過聲音左和右，控制貪食蛇的轉向。
+遊玩方法：遊戲開始後，貪食蛇會自動向前，玩家可以透過聲音喊left和right，控制貪食蛇的轉向，讓牠不要死掉。
 
 Demo影片連結
 -------
-https://drive.google.com/drive/folders/1oDUvnXt03M3HZkmc2x8Qh25uaVNLO_Ho?usp=sharing
+https://drive.google.com/drive/folders/1oDUvnXt03M3HZkmc2x8Qh25uaVNLO_Ho?usp=sharing   
    
 課堂中的應用
 ------
@@ -91,7 +98,7 @@ https://drive.google.com/drive/folders/1oDUvnXt03M3HZkmc2x8Qh25uaVNLO_Ho?usp=sha
 楊博丞：雷霆戰機遊戲製作、串接語音辨識與遊戲、上台報告、Debug<br/>
 張晉瑋：語音辨識模型訓練與測試、整合語音辨識結果到遊戲中、Debug<br/>
 黃姵馨：遊戲介面製作、貪食蛇遊戲製作、會議記錄、簡報製作、Debug<br/>
-許雱茹：遊戲進入介面製作、會議紀錄、Github資料整理、管理設備、Debug<br/>
+許雱茹：遊戲進入介面製作、Github資料整理、管理設備、Debug<br/>
 
 參考資料
 -------
@@ -110,3 +117,9 @@ https://drive.google.com/drive/folders/1oDUvnXt03M3HZkmc2x8Qh25uaVNLO_Ho?usp=sha
    *  在樹莓派4上安裝librosa，llvmlite的方向盤出現錯誤https://www.pythonheidong.com/blog/article/755228/4cd00cdd5bf7a46aba64/
    *  更新scipy:https://stackoverflow.com/questions/55252264/importerror-libf77blas-so-3-cannot-open-shared-object-file-no-such-file-or-di
    *  
+* ### 遊戲製作參考資料：
+   *  https://www.youtube.com/watch?v=61eX0bFAsYs&ab_channel=GrandmaCan-%E6%88%91%E9%98%BF%E5%AC%A4%E9%83%BD%E6%9C%83
+   *  https://www.zendei.com/article/20372.html
+   *  https://www.gushiciku.cn/pl/pQfU/zh-tw
+*  ### 進入遊戲介面參考資料：
+   *  https://stackoverflow.com/questions/10158552/how-to-use-an-image-for-the-background-in-tkinter
