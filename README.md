@@ -77,6 +77,9 @@ https://www.tensorflow.org/lite/guide/get_started?hl=zh-cn
 遊戲規則：在地圖範圍中，有一隻不貪食的蛇，與許多莓果。在遊戲中，貪食蛇有五格的長度，牠不能吃到遊戲畫面中有毒的莓果，否則會減少一條命(減少一個長度)，當吃到五個莓果後，不貪食蛇就會因食物中毒而死亡，遊戲結束。
 遊玩方法：遊戲開始後，貪食蛇會自動向前，玩家可以透過聲音左和右，控制貪食蛇的轉向。
 
+Demo影片連結
+-------
+https://drive.google.com/drive/folders/1oDUvnXt03M3HZkmc2x8Qh25uaVNLO_Ho?usp=sharing
    
 課堂中的應用
 ------
